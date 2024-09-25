@@ -1,0 +1,33 @@
+.relative {
+    position: relative;
+    width: 100%;
+    margin: 0 auto; 
+  }
+  
+  
+  h1 {
+    width: 100%; 
+    margin: 0;   
+    padding: 10px 0; 
+    text-align: center;
+  }
+  
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (min-width: 600px) and (max-width: 900px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+  
+  @media (min-width: 900px) {
+    h1 {
+      font-size: 3rem; 
+    }
+  }
+
+  

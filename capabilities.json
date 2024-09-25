@@ -1,0 +1,83 @@
+{
+  "dataRoles": [
+    {
+      "displayName": "Product",
+      "name": "category",
+      "kind": "Grouping"
+    },
+    {
+      "displayName": "Quantity",
+      "name": "Quantity",
+      "kind": "Measure"
+    },
+    {
+      "displayName": "Measure Data",
+      "name": "measure",
+      "kind": "Measure"
+    }
+  ],
+  "objects": {
+    "redirection": {
+      "properties": {
+        "minRange": {
+          "displayName": "Start Range",
+          "type": {
+            "numeric": true
+          }
+        },
+        "maxRange": {
+          "displayName": "End Range",
+          "type": {
+            "numeric": true
+          }
+        },
+        "rangeColor": {
+          "displayName": "Bar Color",
+          "type": {
+            "fill": {
+              "solid": {
+                "color": true
+              }
+            }
+          }
+        },
+"selectCategory": {
+    "displayName": "Select Category",
+    "type": {
+        "enumeration": [
+          { "value": "Gadgets", "displayName": "Gadgets" },
+          { "value": "Accessories", "displayName": "Accessories" },
+          { "value": "All Categories", "displayName": "All Categories" } 
+        ]
+    }
+}
+
+
+      }
+    }
+      },
+      "dataViewMappings": [
+        {
+          "categorical": {
+            "categories": {
+              "for": {
+                "in": "category"
+              },
+              "dataReductionAlgorithm": {
+                "top": {}
+              }
+            },
+            "values": {
+              "select": [
+                {
+                  "bind": {
+                    "to": "measure"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "privileges": []
+    }
